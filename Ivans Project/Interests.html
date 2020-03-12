@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title> My Web Development project </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: pink;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color:pink;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+   </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#container {
+  overflow: hidden;
+  width: 800px;
+  height: 230px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top:150px;
+}
+
+#imgs {
+  display: block;
+  padding: 0;
+  width: 200%;
+}
+
+#imgs li {
+  padding-right: 10px;
+  display: inline-block;
+ *display:inline;
+}
+
+#imgs img {
+  width: 160px;
+  height: 120px;
+}
+
+.title {
+  display: block;
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: powderblue;
+}
+</style>
+
+
+</head>
+ <body style="background-color:powderblue;"> 
+
+
+ <div class="header">
+    <h1>Michael Ahern Consultant Agency</h1>
+	<p> Welcome to my web page</p>
+</div>
+ 
+ <div class="topnav">
+      <a href = "index.html">Home</a>
+      <a href = "cv.html"> C.V</a>
+      <a href ="Interests.html">Interests</a>
+      <a href ="consultancy.html">Consulting Services</a>
+ 
+ </div>
+
+
+<div class="container">
+ <span class="title">Interests</span>
+  <ul id="imgs">
+    <li><img src="https://s.hs-data.com/bilder/teamfotos/640x360/550.jpg" alt="" /></li>
+    <li><img src="https://sportforbusiness.com/wp-content/uploads/Irish-Soccer-Twitter.jpg" alt="" /></li>
+    <li><img src="https://media.npr.org/assets/img/2015/06/05/ireland-keane-france-fifa-ef415d851f4e863ff5e33bb0b7f9cf5fb0b1054f-s800-c85.jpg" alt="" /></li>
+    <li><img src="https://www.ultimaterugby.com/images/entities/223014-f73e367d07-1/iris.jpg" alt="" /></li>
+    <li><img src="https://www.irishtimes.com/polopoly_fs/1.4011333.1567870828!/image/image.jpg_gen/derivatives/box_620_330/image.jpg" alt="" /></li>
+    <li><img src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/france/paris/paris-cityscape-overview-guide.jpg" alt="" /></li>
+    <li><img src="https://cdn.londonandpartners.com/visit/general-london/areas/river/76709-640x360-houses-of-parliament-and-london-eye-on-thames-from-above-640.jpg" alt="" /></li>
+  </ul>
+  <span class="title"></span> </div>
+<div id="controler"> </div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="lib/ImageScroll.js"></script>
+<script type="text/javascript">
+
+  $('#imgs').imageScroll({
+    orientation:"left",
+    speed:600,
+    interval:1000,
+    hoverPause:true,
+    callback:function(){
+      var ordinal = $(this).find("img").first().attr("src");
+      <!-- console.log(ordinal); -->
+      $(this).next("span").text("CallbackDisplay: hidden "+ordinal+"!");
+    }
+  });
+
+  </script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+</div>
+
+<div class="tab">
+  <button class="tablinks" onclick="openInterest(event, 'Sports')"id="defaultOpen">Sports</button>
+  <button class="tablinks" onclick="openInterest(event, 'Travel')">Travel</button>
+ 
+</div>
+
+<div id="Sports" class="tabcontent">
+
+  <h3>Liverpool</h3>
+        <p>Liverpool Football Club is a professional football club in Liverpool, England, that competes in the Premier League, the top tier of English football. The club has won six European Cups, more than any other English club, three UEFA Cups, four UEFA Super Cups (both also English records), one FIFA Club World Cup, eighteen League titles, seven FA Cups, a record eight League Cups, fifteen FA Community Shields and one Football League Super Cup.Anfield was built in 1884 on land adjacent to Stanley Park. Situated 2 miles (3 km) from Liverpool city centre, it was originally used by Everton before the club moved to Goodison Park after a dispute over rent with Anfield owner John Houlding.Left with an empty ground, Houlding founded Liverpool in 1892 and the club has played at Anfield ever since. The capacity of the stadium at the time was 20,000, although only 100 spectators attended Liverpool's first match at Anfield.</p>
+        <p>Liverpool is one of the best supported clubs in the world.The club states that its worldwide fan base includes more than 200 officially recognised Supporters Clubs in at least 50 countries. Notable groups include Spirit of Shankly.The club takes advantage of this support through its worldwide summer tours,which has included playing in front of 101,000 in Michigan, U.S., and 95,000 in Melbourne, Australia.Liverpool fans often refer to themselves as Kopites, a reference to the fans who once stood, and now sit, on the Kop at Anfield.In 2008 a group of fans decided to form a splinter club, A.F.C. Liverpool, to play matches for fans who had been priced out of watching Premier League football.The song "You'll Never Walk Alone", originally from the Rodgers and Hammerstein musical Carousel and later recorded by Liverpool musicians Gerry and the Pacemakers, is the club's anthem and has been sung by the Anfield crowd since the early 1960s. It has since gained popularity among fans of other clubs around the world. The song's title adorns the top of the Shankly Gates, which were unveiled on 2 August 1982 in memory of former manager Bill Shankly. The "You'll Never Walk Alone" portion of the Shankly Gates is also reproduced on the club's crest.</p>
+        <p>Liverpool's first trophy was the Lancashire League, which it won in the club's first season.In 1901, the club won its first League title, while its first success in the FA Cup was in 1965. In terms of the number of trophies won, Liverpool's most successful decade was the 1980s, when the club won six League titles, two FA Cups, four League Cups, one Football League Super Cup, five Charity Shields (one shared) and two European Cups.The club has accumulated more top-flight wins and points than any other English team. Liverpool also has the highest average league finishing position (3.3) for the 50-year period to 2015 and second-highest average league finishing position for the period 1900–1999 after Arsenal, with an average league placing of 8.7.Liverpool are the most successful British club in international football with fourteen trophies, having won the European Cup/UEFA Champions League, UEFA's premier club competition, six times, an English record and only surpassed by Real Madrid and A.C. Milan. Liverpool's fifth European Cup win, in 2005, meant that the club was awarded the trophy permanently and was also awarded a multiple-winner badge.Liverpool also hold the English record of three wins in the UEFA Cup, UEFA's secondary club competition.In 2019, the club won the FIFA Club World Cup for the first time, and also became the first English club to win the international treble of Club World Cup, Champions League and UEFA Super Cup.</p>
+  
+  <h3>Irish Football Association</h3>
+      <p>The Republic of Ireland national football team represents Ireland in men's international football. It is governed by the Football Association of Ireland (FAI) and stages its home fixtures at the Aviva Stadium in Dublin.
+The team made their debut at the 1924 Summer Olympics, reaching the quarter-finals. Between 1924 and 1936, the team competed as the Irish Free State and from then until 1950, it was referred to by the FAI as Éire or Ireland. In 1953, FIFA decreed that for competitive matches in tournaments that both Irish teams may enter, the FAI team would be officially called the Republic of Ireland while the IFA team was to be named Northern Ireland. Northern Ireland was allowed to use the title Ireland by FIFA in the Home International Competition until it was discontinued in 1984. The Republic of Ireland was the first nation from outside the United Kingdom to defeat England at home in a fixture played at Goodison Park, Liverpool, in 1949. The team also reached the quarter-final stage of the 1964 European Nations' Cup, where they lost to the eventual champions Spain.</p>
+      <p>Under the guidance of Jack Charlton, the team enjoyed its most successful era, reaching their highest FIFA world ranking ever at sixth in August 1993, and qualifying for UEFA Euro 1988 in their first appearance at the UEFA European Championship, reaching the quarter-finals of the 1990 FIFA World Cup in their first ever appearance at the finals, as well as making the last 16 at the 1994 edition. Charlton's successor Mick McCarthy lost out on the next two major tournaments but ultimately qualified for the 2002 World Cup, making it to the last 16. Under Giovanni Trapattoni, the team narrowly lost out on qualification for the 2010 World Cup during a controversial play-off, but went on to qualify for Euro 2012.
+The team failed to qualify for the 2014 World Cup in Brazil, marking the end of Trapattoni's tenure as manager. The Republic of Ireland also fell to a record low FIFA ranking of 59th, then a record low of 70th in June 2014.For the next Euro qualifying campaign under manager Martin O'Neill, the Republic of Ireland finished third behind Germany and Poland, but went on to qualify for Euro 2016 after a 3–1 aggregate win over Bosnia and Herzegovina in the play-offs. The Boys in Green reached the Round of 16 stage at that tournament and were knocked out by the hosts and eventual runners-up France after losing 2–1.</p>
+      <p>he FAI confirmed on the weekend of 23 November 2018, Mick McCarthy’s appointment as the Republic of Ireland manager after the 59-year-old agreed to accept the vacancy following a meeting with John Delaney. McCarthy appointed Terry Connor, his assistant from spells at Wolves and Ipswich Town, as his assistant along with Ireland’s record goalscorer Robbie Keane on the backroom team. He started poorly only beating Gibraltar 1-0 after previous 7-0 and 4-0 wins against them. However a good performance versus Georgia saw another 1-0 win thanks to a Conor Hourihane free kick. The wins left them top of the group, a position they still held 3 games later in mid September 2019, with just 3 games remaining.However Ireland failed to gain an automatic Qualification place and will no Compete in a play-off against slovalia on the 26th of March </p>
+
+  <h3>Irish Rugby</h3>
+      <p>The Ireland national rugby union team is the representative national team in the sport of rugby union for the island of Ireland. The team competes annually in the Six Nations Championship and every four years in the Rugby World Cup. Ireland is also one of the four unions that make up the British and Irish Lions – players eligible to play for Ireland are also eligible for the Lions.
+The Ireland national team dates to 1875, when it played its first international match against England. Ireland reached number 1 in the World Rugby Rankings for the first time in 2019.</p>
+      <p>At the 1995 World Cup, Ireland came through their group to make their third consecutive quarter-final appearance. Unfortunately, France proved too strong, with Ireland going down 12–36 in the quarter-finals.
+The start of the professional era was disappointing for Ireland, who finished bottom of the Five Nations Championship three years in succession (1996, 1997 and 1998) and lost to Italy three times, at home (29–37) and abroad (12–22 and 22–37). Warren Gatland took over as coach in 1998, but was unable to produce immediate success. The 1999 World Cup was staged primarily in Wales, though Ireland played all their pool games in Dublin. In a play-off, Ireland were beaten 28–24 by Argentina, marking the first time that Ireland failed to reach the quarter-finals.</p>
+      <p>Ireland placed second in the 2017 Six Nations Championship, behind defending champions England, who the Irish defeated in the final of round of the competition by 13–9, ending England's record-equalling run of 18 victories since 2015. However, they lost to Scotland 22–27 in Round 1 and Wales 9–22 in Round 4 during the same tournament. With many first-choice players selected to tour with the British and Irish Lions, Ireland took a development squad into their summer games that year, which included a 55–19 win over the USA, and a 2–2 test series victory against Japan. In November 2017, Ireland moved to third in the world rankings following their biggest-ever win over South Africa, 38–3, and victories over Fiji and Argentina.
+
+After winning the 2018 Six Nations Championship with a Grand Slam, Ireland returned to second in the world rankings. A 2–1 series win over Australia in summer that year was followed by a second victory in two years against the world number one All Blacks, by 16–9 which cemented Ireland's number two ranking.</P>
+</div>
+
+<div id="Travel" class="tabcontent">
+<h
+</body>
+
+  <h3>Paris</h3>
+      <p>Paris is the capital and most populous city of France, with a population of 2,148,271 residents (official estimate, 1 January 2020) in an area of 105 square kilometres .Since the 17th century, Paris has been one of Europe's major centres of finance, diplomacy, commerce, fashion, science and arts. The City of Paris is the centre and seat of government of the Île-de-France, or Paris Region, which has an estimated official 2020 population of 12,278,210, or about 18 percent of the population of France.</p>
+      <p>The city's top tourist attraction was the Notre Dame Cathedral, which welcomed an estimated 12,000,000 visitors in 2018, but is now closed for renovation after the 15 April 2019 fire, and is not expected to reopen for several years. Second was the Basilique du Sacré-Cœur on Montmartre, with an estimated 11 million visitors. This was followed by the Louvre Museum (10.1 million visitors); Centre Pompidou (3.5 million visitors); Musée d'Orsay(3.3 million); The National Museum of Natural History, France (2.4 million visitors); The Chapel of Our Lady of the Miraculous Medal (2 million visitors); the Arc de Triomphe (1.7 million visitors) and Sainte-Chapelle (1.3 million visitors).The centre of Paris contains the most visited monuments in the city, including the Notre Dame Cathedral (now closed for restoration) and the Louvre as well as the Sainte-Chapelle; Les Invalides, where the tomb of Napoleon is located, and the Eiffel Tower are located on the Left Bank south-west of the centre. The Panthéon and the Catacombs of Paris are also located on the Left Bank of the Seine. The banks of the Seine from the Pont de Sully to the Pont d'Iéna have been listed as a UNESCO World Heritage Site</p> 
+
+<h3>London</h3>
+      <p> London is the capital and largest city of England and the United Kingdom.Standing on the River Thames in the south-east of England, at the head of its 50-mile (80 km) estuary leading to the North Sea, London has been a major settlement for two millennia. Londinium was founded by the Romans. The City of London, London's ancient core − an area of just 1.12 square miles (2.9 km2) and colloquially known as the Square Mile − retains boundaries that closely follow its medieval limits.The City of Westminster is also an Inner London borough holding city status. Greater London is governed by the Mayor of London and the London Assembly.</p>
+      <p>Leisure is a major part of the London economy, with a 2003 report attributing a quarter of the entire UK leisure economy to London at 25.6 events per 1000 people. Globally, the city is amongst the big four fashion capitals of the world, and according to official statistics, London is the world's third busiest film production centre, presents more live comedy than any other city, and has the biggest theatre audience of any city in the world.Within the City of Westminster in London, the entertainment district of the West End has its focus around Leicester Square, where London and world film premieres are held, and Piccadilly Circus, with its giant electronic advertisements. London's theatre district is here, as are many cinemas, bars, clubs, and restaurants, including the city's Chinatown district (in Soho), and just to the east is Covent Garden, an area housing speciality shops. The city is the home of Andrew Lloyd Webber, whose musicals have dominated the West End theatre since the late 20th century. The United Kingdom's Royal Ballet, English National Ballet, Royal Opera, and English National Opera are based in London and perform at the Royal Opera House, the London Coliseum, Sadler's Wells Theatre, and the Royal Albert Hall, as well as touring the country.</p>
+  </div>
+
+
+
+<script>
+function openInterest(evt, Interests) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(Interests).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html>  
